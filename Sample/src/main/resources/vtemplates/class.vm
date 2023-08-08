@@ -1,0 +1,29 @@
+package ${packageName};
+
+import java.io.Serializable;
+import javax.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Length;
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ${className} implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    #foreach($property in $properties)
+
+        #if($property.required == true)
+        @NotBlank(message = "Field required")
+        #end
+
+        #if($property.length)
+        @Length(max = $property.length)
+        #end
+        private ${property.type} $property.name;
+    #end
+
+}

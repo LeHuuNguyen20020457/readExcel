@@ -1,0 +1,11 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iplat.master.ddd.infrastructure.sample.mapper.SampleMapper">
+   <select id="getSampleDetail" resultType="SampleDetail">
+
+   </select>
+   <select id="getSampleByBusinessCode" resultType="SampleEntity">
+
+   </select>
+</mapper>
